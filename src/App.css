@@ -1,42 +1,95 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+body {
+  background: linear-gradient(45deg, #d2dfed 0%,#88e0aa 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 상단에서 시작하도록 정렬 */
+  min-height: 100vh; /* 최소 높이를 뷰포트 높이로 설정 */
+  margin: 0;
+  padding: 20px;
+}
+
+
+#root { 
+  background: linear-gradient(45deg, #f7fbcc 0%,#f6fad4 100%);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; 
+}
+
+
+/* 할일 목록 (ul)의 기본 리스트 스타일 제거 */
+ul {
+  list-style: none; 
+  padding: 0;       
+  margin: 0;         
+}
+
+
+li {
+  background-color: #ffffff; 
+  margin-bottom: 10px;       
+  padding: 15px;            
+  border-radius: 5px;       
+  display: flex;            
+  align-items: center;       
+  flex-wrap: wrap;           
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}
+
+/* 기타 요소들 (선택 사항) */
+h2 {
+  color: #005f13; /* 제목 색상 */
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+input[type="text"] {
+  flex-grow: 1;
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  color: black;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background-color: #2196f3; 
+  color: white;              
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px; 
+  font-size: 0.9em;
+  transition: background-color 0.2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: #1976d2; 
 }
 
-.card {
-  padding: 2em;
+
+button:nth-of-type(2) { 
+  background-color: #f44336;
+}
+button:nth-of-type(2):hover {
+  background-color: #d32f2f;
 }
 
-.read-the-docs {
-  color: #888;
+button:nth-of-type(3) { 
+  background-color: #4caf50;
+}
+button:nth-of-type(3):hover {
+  background-color: #388e3c;
+}
+
+
+li span, li input {
+  flex-grow: 1;
+  padding-right: 10px;
 }
